@@ -18,8 +18,10 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  # username: postgres
+  # password: roots
   username: postgres
-  password: root
+  password: 7868
 
 development:
   <<: *default
@@ -82,5 +84,8 @@ test:
 production:
   <<: *default
   database: ro_r_recipe_app_production
-  username: ro_r_recipe_app
-  password: <%= ENV["RO_R_RECIPE_APP_DATABASE_PASSWORD"] %>
+  # username: ro_r_recipe_app
+  # password: <%= ENV["RO_R_RECIPE_APP_DATABASE_PASSWORD"] %>
+
+  username: postgres
+  password: 7868
