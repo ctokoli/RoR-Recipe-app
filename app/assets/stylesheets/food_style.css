@@ -5,8 +5,6 @@ body {
   color: #333;
   font-weight: 400;
   padding: 8%;
-  place-items: center;
-  display: grid;
 }
 
 table {
@@ -23,4 +21,13 @@ th {
 
 tr:nth-child(even) {
   background-color: #ddd;
+}
+
+.f-label {
+    margin-bottom: 15px;
+}
+
+select#food_measurement_unit {
+    width: 185px;
+    padding: 5px 9px;
 }
