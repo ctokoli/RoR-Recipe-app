@@ -4,11 +4,11 @@ class FoodController < ApplicationController
   end
 
   def new
-    @food = Food.new 
+    @food = Food.new
   end
 
   def create
-    @user =  current_user
+    @user = current_user
     @food = Food.new(create_param)
     @food.user = @user
     if @food.save
@@ -26,7 +26,7 @@ class FoodController < ApplicationController
     flash[:notice] = 'Food was successfully deleted.'
     redirect_to food_index_path
   end
-  
+
   def create_param
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
   end
