@@ -19,6 +19,13 @@ class FoodController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @food = Food.find(params[:id])
+    @food.destroy
+    flash[:notice] = 'Food was successfully deleted.'
+    redirect_to food_index_path
+  end
   
   def create_param
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
