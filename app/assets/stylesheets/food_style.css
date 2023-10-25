@@ -1,0 +1,26 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    font-weight: 400;
+    padding: 8%;
+    place-items: center;
+    display: grid;
+
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px solid #bdbdbd;
+    text-align: left;
+    padding: 6px 35px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
