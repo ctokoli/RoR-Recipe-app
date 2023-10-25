@@ -9,7 +9,7 @@
       </div>
       <div class="f-label">
         <%= f.label :measurement_unit %><br>
-        <%= f.number_field :measurement_unit, class: "input", step: 0.1, required: true %>
+        <%= f.select :measurement_unit, options_for_select([['Grams', 'grams'], ['Ounces', 'ounces'], ['Cups', 'cups'], ['Tablespoons', 'tablespoons']]) %>
       </div>
       <div class="f-label">
         <%= f.label :price %><br>
