@@ -5,8 +5,6 @@ body {
   color: #333;
   font-weight: 400;
   padding: 8%;
-  place-items: center;
-  display: grid;
 }
 
 table {
@@ -23,4 +21,45 @@ th {
 
 tr:nth-child(even) {
   background-color: #ddd;
+}
+
+.f-label {
+  margin-bottom: 15px;
+}
+
+select#food_measurement_unit,
+select#recipe_food_food_id {
+  width: 185px;
+  padding: 5px 9px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+}
+
+.card.mb-4 {
+  width: 70%;
+}
+
+.card-count {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shopping-list h1 {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.food-table {
+  place-content: center;
+  display: grid;
 }

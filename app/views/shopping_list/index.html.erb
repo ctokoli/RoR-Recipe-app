@@ -1,0 +1,33 @@
+<div class="shopping-list">
+    <%if @recipe_foods.empty?%>
+            <h2>Empty List for this Recipe</h2>
+    <%else%>
+        <h1>Shopping List</h1> 
+        <div class="card-count">
+            <p><strong>Amount of Food items to buy:</strong> <%= @recipe_foods.count %></p>
+            <% total_price = 0 %>
+                <% @recipe_foods.each do |recipe_food| %>
+                    <% total_price += recipe_food.food.price %>
+                <% end %>
+                <p><strong>Total Value of food needed:</strong> $<%=total_price %></p>
+        </div>
+        <table class="table mt-4">
+        <thead>
+        <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% @recipe_foods.each do |recipe_food| %>
+            <tr>
+            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.quantity %></td>
+            <td><%= recipe_food.food.price %></td>
+            </tr>
+        <% end %>
+        </tbody>
+    </table>
+   <%end%>
+</div>
