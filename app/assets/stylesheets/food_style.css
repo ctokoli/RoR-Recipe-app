@@ -41,3 +41,24 @@ select#food_measurement_unit, select#recipe_food_food_id {
 .card.mb-4 {
     width: 70%;
 }
+
+.card-count {
+    display: flex;
+    justify-content: space-around;
+}
+
+.shopping-list h1 {
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.food-table {
+    place-content: center;
+    display: grid;
+}
