@@ -1,0 +1,13 @@
+<h1 class="display-4">Recipes</h1>
+<div class="container">
+  <% @public_recipes.each do |recipe| %>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h2 class="card-title"><%= link_to recipe.name, recipe %></h2>
+        <p class="card-text"><strong>Description:</strong> <%= recipe.description %></p>
+        <p class="card-text"><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
+        <p class="card-text"><strong>Cooking Time:</strong> <%= recipe.cooking_time %> minutes</p>
+      </div>
+    </div>
+  <% end %>
+</div>
