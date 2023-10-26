@@ -24,41 +24,42 @@ tr:nth-child(even) {
 }
 
 .f-label {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
-select#food_measurement_unit, select#recipe_food_food_id {
-    width: 185px;
-    padding: 5px 9px;
+select#food_measurement_unit,
+select#recipe_food_food_id {
+  width: 185px;
+  padding: 5px 9px;
 }
 
 .card-content {
-    display: flex;
-    justify-content: space-between;
-    height: 43px;
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
 }
 
 .card.mb-4 {
-    width: 70%;
+  width: 70%;
 }
 
 .card-count {
-    display: flex;
-    justify-content: space-around;
+  display: flex;
+  justify-content: space-around;
 }
 
 .shopping-list h1 {
-    text-align: center;
-    margin-bottom: 34px;
+  text-align: center;
+  margin-bottom: 34px;
 }
 
 .top {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
 }
 
 .food-table {
-    place-content: center;
-    display: grid;
+  place-content: center;
+  display: grid;
 }
