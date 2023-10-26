@@ -2,9 +2,10 @@ class RecipeFoodsController < ApplicationController
   def index; end
 
   def new
+    @user = current_user
     @recipe_food = RecipeFood.new
     @recipe = Recipe.find(params[:recipe_id])
-    @foods = Food.all
+    @foods = @user.foods
   end
 
   def create
