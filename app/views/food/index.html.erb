@@ -1,9 +1,13 @@
 <div class="container">
+    <%if @foods.empty?%>
+            <h2>Food List is Empty</h2>
+    <%else%> 
      <div class="top">
         <h2>Welcome <%= current_user.name%></h2>
+        <%= link_to 'Add Food', new_food_path(), class: "btn btn-primary" %>
      </div>
-     <%= link_to 'Add Food', new_food_path() %>
-    <table>
+     <div class="food-table">
+        <table>
         <thead>
             <tr>
             <th>Food</th>
@@ -22,6 +26,8 @@
                 <td><%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
               </tr>
             <%end%>
-       
     </table>
+     </div>
+    
+   <%end%>
 </div>
