@@ -1,6 +1,7 @@
 <div class="container">
     <%if @foods.empty?%>
             <h2>Food List is Empty</h2>
+             <%= link_to 'Add Food', new_food_path(), class: "btn btn-primary" %>
     <%else%> 
      <div class="top">
         <h2>Welcome <%= current_user.name%></h2>
