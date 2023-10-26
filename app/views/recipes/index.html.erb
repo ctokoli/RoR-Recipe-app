@@ -1,6 +1,7 @@
 <div>
     <%if @recipes.empty?%>
       <h2>Recipes are not available</h2>
+      <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
     <%else%>
       <h1 class="display-4">Recipes</h1>
       <div class="container">
