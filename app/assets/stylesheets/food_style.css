@@ -27,7 +27,7 @@ tr:nth-child(even) {
     margin-bottom: 15px;
 }
 
-select#food_measurement_unit {
+select#food_measurement_unit, select#recipe_food_food_id {
     width: 185px;
     padding: 5px 9px;
 }
