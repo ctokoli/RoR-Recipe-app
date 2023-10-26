@@ -31,3 +31,13 @@ select#food_measurement_unit, select#recipe_food_food_id {
     width: 185px;
     padding: 5px 9px;
 }
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    height: 43px;
+}
+
+.card.mb-4 {
+    width: 70%;
+}
