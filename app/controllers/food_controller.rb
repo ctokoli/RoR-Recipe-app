@@ -23,6 +23,7 @@ class FoodController < ApplicationController
 
   def destroy
     @food = Food.find(params[:id])
+    @food.recipe_foods.destroy_all
     @food.destroy
     flash[:notice] = 'Food was successfully deleted.'
     redirect_to food_index_path
