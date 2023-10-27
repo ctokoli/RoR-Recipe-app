@@ -10,9 +10,9 @@
               <div class="card-content"> 
                 <h2 class="card-title"><%= link_to recipe.name, shopping_list_index_path(recipe_id: recipe) %></h2>
                 <div class="card-food"> 
-                  <p class="card-text"><strong>Total Food Items:</strong> <%= recipe.recipe_foods.count%></p>
+                  <p class="card-text"><strong>Total Food Items:</strong> <%= recipe.recipe_foods_count%></p>
                   <% total_price = 0 %>
-                  <% recipe.recipe_foods.each do |recipe_food| %>
+                  <% recipe.recipe_foods.includes(:food).each do |recipe_food| %>
                     <% total_price += recipe_food.food.price %>
                   <% end %>
                   <p><strong>Total Price:</strong> $<%=total_price %></p>
