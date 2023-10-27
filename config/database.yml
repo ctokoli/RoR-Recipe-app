@@ -21,7 +21,7 @@ default: &default
   # username: postgres
   # password: roots
   username: postgres
-  password: root
+  password: 7868
 
 development:
   <<: *default
