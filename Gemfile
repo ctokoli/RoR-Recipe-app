@@ -3,9 +3,12 @@ source 'https://rubygems.org'
 ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
+gem 'factory_bot_rails'
 gem 'psych', '2.2.2', platform: :ruby
 gem 'rails', '~> 7.1.1'
-
+gem 'rails-controller-testing'
+gem 'rspec'
+gem 'rspec-rails'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
