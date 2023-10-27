@@ -24,7 +24,7 @@
     <button class="btn btn-success">Generate Shopping List</button>
     <%= link_to "Add Ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'btn btn-primary' %>
   </div>
-  
+
   <table class="table mt-4">
     <thead>
       <tr>
@@ -40,9 +40,9 @@
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %></td>
           <td><%= recipe_food.food.price %></td>
-          <td>
+          <td class="boton">
             <button class="btn btn-warning">Edit</button>
-            <%= link_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
           </td>
         </tr>
       <% end %>
