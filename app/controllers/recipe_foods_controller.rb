@@ -26,7 +26,7 @@ class RecipeFoodsController < ApplicationController
     flash[:notice] = 'Recipe Item was successfully deleted.'
     redirect_to recipe_path(@recipe_foods.recipe)
   end
-  
+
   def recipe_foods_params
     params.require(:recipe_food).permit(:food_id, :quantity)
   end
