@@ -15,10 +15,12 @@ Rails.application.routes.draw do
 
   resources :foods, only: [:index, :show, :new, :create, :destroy]
   resources :recipes, only: [:index, :show, :new, :create, :destroy, :update] do
-    resources :recipe_foods, only: [:show, :new, :create, :destroy]
+    resources :recipe_foods, only: [:new, :create, :destroy, :update]
   end
 
   resources :users, only: [:index, :show, :new, :create, :destroy]
 
-end
+  end
+  
+  delete '/recipes/:recipe_id/recipe_foods/:id', to: 'recipe_foods#destroy', as: :delete_recipe_food
 end
