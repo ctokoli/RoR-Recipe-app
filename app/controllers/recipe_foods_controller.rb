@@ -19,7 +19,7 @@ class RecipeFoodsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @recipe_foods = RecipeFood.find(params[:id])
     @recipe = @recipe_foods.update(recipe_foods_params)
@@ -29,7 +29,6 @@ class RecipeFoodsController < ApplicationController
     else
       render :edit
     end
-
   end
 
   def destroy
