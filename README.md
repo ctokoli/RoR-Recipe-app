@@ -1,4 +1,4 @@
-<h1>Blog App</h1>
+<h1>RoR Food Recipe</h1>
 
 <a name="readme-top"></a>
 
@@ -7,7 +7,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 RoR Food Recipe ](#-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
