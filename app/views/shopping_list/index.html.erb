@@ -5,11 +5,8 @@
         <h1>Shopping List</h1>
         <div class="card-count">
             <p><strong>Amount of Food items to buy:</strong> <%= @recipe_foods.count %></p>
-            <% total_price = 0 %>
-                <% @recipe_foods.each do |recipe_food| %>
-                    <% total_price += recipe_food.food.price %>
-                <% end %>
-                <p><strong>Total Value of food needed:</strong> $<%=total_price %></p>
+            
+                <p><strong>Total Value of food needed:</strong> $<%=@remaining_foods %></p>
         </div>
         <table class="table mt-4">
         <thead>
