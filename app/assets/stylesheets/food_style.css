@@ -69,7 +69,31 @@ td.boton {
 }
 
 .recipe-details-btns.mt-3 {
-  width: 750px;
+  width: 690px;
   display: flex;
   justify-content: space-between;
+}
+
+.recipe-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.btn.btn-danger.btn-sm {
+  margin-top: -74px;
+}
+
+.card.mb-7 {
+  margin-top: 20px;
+}
+
+.recipe-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-4.text-center {
+  margin-left: 23px;
+  margin-top: 1.5rem;
 }
