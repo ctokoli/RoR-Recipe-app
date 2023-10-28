@@ -1,0 +1,33 @@
+<div class="container">
+    <%if @foods.empty?%>
+            <h2>Food List is Empty</h2>
+             <%= link_to 'Add Food', new_food_path(), class: "btn btn-primary" %>
+    <%else%> 
+     <div class="top">
+        <h2>Welcome <%= current_user.name%></h2>
+        <%= link_to 'Add Food', new_food_path(), class: "btn btn-primary" %>
+     </div>
+     <div class="food-table">
+        <table>
+        <thead>
+            <tr>
+            <th>Food</th>
+            <th>Unit Price</th>
+            <th>Quatity</th>
+            <th>Measurement unit</th>
+            <th>Action</th>
+            </tr>
+        </thead>
+            <% @foods.each do |food| %>
+              <tr>
+                <td><%= food.name%></td>
+                <td><%= food.price%></td>
+                <td><%= food.quantity%></td>
+                <td><%= food.measurement_unit%></td>
+                <td><%= button_to 'Delete', food_path(food.id), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+              </tr>
+            <%end%>
+    </table>
+  </div>
+ <%end%>
+</div>

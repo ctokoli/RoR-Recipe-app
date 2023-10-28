@@ -1,0 +1,108 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  font-weight: 400;
+  padding: 8%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid #bdbdbd;
+  text-align: left;
+  padding: 6px 35px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+.f-label {
+  margin-bottom: 15px;
+}
+
+select#food_measurement_unit,
+select#recipe_food_food_id {
+  width: 185px;
+  padding: 5px 9px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  height: 43px;
+}
+
+.card.mb-4 {
+  width: 70%;
+}
+
+.card-count {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shopping-list h1 {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.food-table {
+  place-content: center;
+  display: grid;
+}
+
+td.boton {
+  display: flex;
+}
+
+.recipe-details-btns.mt-3 {
+  width: 690px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.btn.btn-danger.btn-sm {
+  margin-top: -74px;
+}
+
+.card.mb-7 {
+  margin-top: 20px;
+}
+
+.recipe-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mb-4.text-center {
+  margin-left: 23px;
+  margin-top: 1.5rem;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.card-text-name {
+  text-align: start;
+}

@@ -1,0 +1,27 @@
+
+<div class="container">
+  <h1>Add Food </h1>
+  <%= form_with(model: @food, url: food_index_path(@food)) do |f| %>
+    <div class="f-post">
+      <div class="f-label">
+        <%= f.label :name_of_food, class: "form-label"%><br>
+        <%= f.text_field :name,  required: true %>
+      </div>
+      <div class="f-label">
+        <%= f.label :measurement_unit, class: "form-label" %><br>
+        <%= f.select :measurement_unit, options_for_select([['Gram', 'gram'], ['Ounce', 'ounce'], ['Cup', 'cup'], ['Tablespoon', 'tablespoon']], selected: 'grams'), class: "form-control" %>
+      </div>
+      <div class="f-label">
+        <%= f.label :price, class: "form-label" %><br>
+        <%= f.number_field :price, required: true %>
+      </div>
+      <div class="f-label">
+        <%= f.label :quantity, class: "form-label" %><br>
+        <%= f.number_field :quantity, class: "input", step:1, required: true %>
+      </div>
+      <div class="btn-container">
+        <p><%= f.submit "Add Food", class: "btn btn-primary"%></p>
+      </div>
+    </div>
+  <% end %>
+</div>

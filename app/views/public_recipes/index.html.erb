@@ -1,0 +1,31 @@
+<div>
+  <% if @public_recipes.empty? %>
+    <h2 class="text-center">Recipes not available</h2>
+  <% else %>
+    <div class="container text-center">
+      <h1 class="display-4">Public Recipes</h1>
+      <div class="row justify-content-center">
+        <% @public_recipes.each_with_index do |recipe, index| %>
+          <div class="col-md-8">
+            <div class="card mb-7">
+              <div class="card-body p-9">
+                <div class="card-content">
+                  <h2 class="card-title"><%= link_to " #{recipe.name }", recipe_path(recipe) %></h2>
+                  <div class="card-food">
+                    <p class="card-text"><strong>Total Food Items:</strong> <%= recipe.recipe_foods_count %></p>
+                    <% total_price = 0 %>
+                    <% recipe.recipe_foods.includes(:food).each do |recipe_food| %>
+                      <% total_price += recipe_food.food.price %>
+                    <% end %>
+                    <p><strong>Total Price:</strong> $<%= total_price %></p>
+                  </div>
+                </div>
+                <p class="card-text-name"><strong>By:</strong> <%= recipe.user.name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
