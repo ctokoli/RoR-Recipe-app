@@ -67,3 +67,9 @@ select#recipe_food_food_id {
 td.boton {
   display: flex;
 }
+
+.recipe-details-btns.mt-3 {
+  width: 750px;
+  display: flex;
+  justify-content: space-between;
+}
