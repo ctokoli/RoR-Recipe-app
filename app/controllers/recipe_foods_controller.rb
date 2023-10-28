@@ -21,15 +21,23 @@ class RecipeFoodsController < ApplicationController
   end
 
   def edit
+    @user = current_user
+    @foods = @user.foods
+    @recipe_food = RecipeFood.find(params[:id])
+  end
+
+  def update
+    @recipes = Recipe.find(params[:recipe_id])
     @recipe_foods = RecipeFood.find(params[:id])
     @recipe = @recipe_foods.update(recipe_foods_params)
     if @recipe
       flash[:notice] = 'Recipe item was updated successfully'
-      redirect_to recipe_path(@recipe_foods)
+      redirect_to recipe_path(@recipes)
     else
       render :edit
     end
   end
+
 
   def destroy
     @recipe_foods = RecipeFood.find(params[:id])
