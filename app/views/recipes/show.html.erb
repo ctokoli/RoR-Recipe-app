@@ -7,11 +7,10 @@
     </div>
 
     <div class="col-md-6 text-right">
-      <%= form_for @recipe, url: recipe_path(@recipe), method: :patch do |f| %>
-        <div class="form-group">
-          <%= f.label :public, class: 'mr-2' %>
-          <%= f.check_box :public, id: 'recipe_public', class: 'form-check-input' %>
-          <%= f.submit 'Toggle', class: 'btn btn-primary' %>
+      <%= form_with model: @recipe, url: recipe_path(@recipe.id), method: :patch, local: true do |form| %>
+        <div class="form-switch">
+          <%= form.check_box :public, class: "form-check-input", onchange: 'this.form.submit()' %>
+          <%= form.label :Public, 'public', class: "form-check-label", checked: @recipe.public %> <br />
         </div>
       <% end %>
     </div>
@@ -21,7 +20,7 @@
   <p><strong>Description:</strong> <%= @recipe.description %></p>
 
   <div class="recipe-details-btns mt-3">
-    <button class="btn btn-success">Generate Shopping List</button>
+     <%= link_to "Generate Shopping List", shopping_list_index_path(recipe_id: @recipe.id), class: 'btn btn-success' %>
     <%= link_to "Add Ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'btn btn-primary' %>
   </div>
 
