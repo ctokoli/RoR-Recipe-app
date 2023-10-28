@@ -104,6 +104,19 @@ rspec spec
 - Twitter: [@twitterhandle](https://twitter.com/Kkmanuu1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-kipngeno/)
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+Features will be added to the project.
+
+- **User Login Interface**
+- **User comments and like**
+- **Add Edit to Food**
+- **Add Edit to Recipe**
+- **Add Inventory**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
