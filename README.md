@@ -72,8 +72,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd Blog
-  gh repo clone https://github.com/ctokoli/Blog.git
+  cd Recipe App
+  gh repo clone https://github.com/ctokoli/RoR-Recipe-app.git
 ```
 
 ### Install
@@ -139,30 +139,3 @@ I would like to thank Microverse for including this in their curriculum.
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
