@@ -97,3 +97,12 @@ button.btn.btn-danger.btn-sm {
   margin-left: 23px;
   margin-top: 1.5rem;
 }
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+}
+
+p.card-text-name {
+  text-align: start;
+}
