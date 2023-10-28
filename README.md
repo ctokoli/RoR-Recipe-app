@@ -94,7 +94,7 @@ rspec spec
 
 ## :bust_in_silhouette: Author <a name="authors"></a>
 
- Cephas TOKOLI*
+ Cephas TOKOLI
 - GitHub: [@Ctokoli](https://github.com/ctokoli/)
 - Twitter: [@Ctokoli](https://twitter.com/ctokoli)
 - LinkedIn: [Cephas Tokoli](https://www.linkedin.com/in/ctokoli)
