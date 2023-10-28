@@ -5,19 +5,23 @@
         <h2>Recipes are not available</h2>
         <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
       <% else %>
-        <h1 class="display-4 text-center">Recipes</h1>
-        <div class="mb-4 text-center">
-          <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
+        <div class="recipe-title"> 
+            <h1 class="display-4 text-center">Recipes</h1>
+            <div class="mb-4 text-center">
+              <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
+            </div>
         </div>
         <% @recipes.each_with_index do |recipe, index| %>
           <div class="card mb-7">
             <div class="card-body">
+             <div class="recipe"> 
               <h2 class="card-title"><%= link_to "Recipe #{index + 1}", recipe %></h2>
               <div class="text-end">
                 <p class="card-text"><strong>Description:</strong> <%= recipe.description %></p>
                 <p class="card-text"><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
                 <p class="card-text"><strong>Cooking Time:</strong> <%= recipe.cooking_time %> minutes</p>
               </div>
+             </div>
               <% if current_user == recipe.user %>
                 <%= button_to "REMOVE", recipe_path(recipe.id), method: :delete, class: "btn btn-danger btn-sm" %>
               <% end %>
