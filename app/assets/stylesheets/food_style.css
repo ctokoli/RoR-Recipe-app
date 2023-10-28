@@ -63,3 +63,7 @@ select#recipe_food_food_id {
   place-content: center;
   display: grid;
 }
+
+td.boton {
+  display: flex;
+}
