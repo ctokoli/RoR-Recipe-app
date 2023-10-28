@@ -6,7 +6,7 @@
         <div class="card-count">
             <p><strong>Amount of Food items to buy:</strong> <%= @recipe_foods.count %></p>
             
-                <p><strong>Total Value of food needed:</strong> $<%=@remaining_foods %></p>
+                <p><strong>Total Value of food needed:</strong> $<%=@remaining_foods_price %></p>
         </div>
         <table class="table mt-4">
         <thead>
@@ -17,11 +17,11 @@
         </tr>
         </thead>
         <tbody>
-        <% @recipe_foods.each do |recipe_food| %>
+        <%@missing_foods.each do |recipe_food| %>
             <tr>
-            <td><%= recipe_food.food.name %></td>
+            <td><%= recipe_food.name %></td>
             <td><%= recipe_food.quantity %></td>
-            <td><%= recipe_food.food.price %></td>
+            <td><%= recipe_food.price %></td>
             </tr>
         <% end %>
         </tbody>
