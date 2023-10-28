@@ -5,16 +5,16 @@ RSpec.feature 'Recipe Index Page', type: :feature do
 
   before do
     # You may need to set up any necessary data, such as recipes, before the test
-    @recipe1 = create(:recipe, name: 'Recipe 1', user: user)
-    @recipe2 = create(:recipe, name: 'Recipe 2', user: user)
+    @recipe1 = create(:recipe, name: 'Recipe 1', user:)
+    @recipe2 = create(:recipe, name: 'Recipe 2', user:)
     login_as(user, scope: :user)
   end
 
   scenario 'displaying recipes' do
     visit recipes_path
 
-    expect(page).to have_content('Recipes')  # Check for the heading
-    expect(page).to have_link('Add New Recipe')  # Check for the "Add New Recipe" link
+    expect(page).to have_content('Recipes') # Check for the heading
+    expect(page).to have_link('Add New Recipe') # Check for the "Add New Recipe" link
 
     # Check that each recipe is displayed
     expect(page).to have_content(@recipe1.name)
