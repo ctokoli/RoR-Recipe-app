@@ -7,4 +7,10 @@ class User < ApplicationRecord
   has_many :recipes, foreign_key: :user_id
 
   validates :name, presence: true
+
+  # def missing_foods
+  #   user_foods = self.foods
+  #   recipe_foods = RecipeFood.joins(:recipe).where(recipes: { user_id: self.id }).map(&:food)
+  #   reamin = user_foods - recipe_foods
+  # end
 end
