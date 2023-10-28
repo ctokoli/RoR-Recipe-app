@@ -41,8 +41,8 @@
           <td><%= recipe_food.quantity %></td>
           <td><%= recipe_food.food.price %></td>
           <td class="boton">
-            <button class="btn btn-warning">Edit</button>
-            <%= button_to "Delete", recipe_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+            <%= link_to "Edit", recipe_recipe_food_path(@recipe, recipe_food), class: 'btn btn-warning' %>
+            <%= button_to "Delete", delete_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
           </td>
         </tr>
       <% end %>
