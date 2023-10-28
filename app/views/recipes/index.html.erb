@@ -1,21 +1,23 @@
-<div>
-    <%if @recipes.empty?%>
-      <h2>Recipes are not available</h2>
-      <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
-    <%else%>
-      <h1 class="display-4">Recipes</h1>
-      <div class="container">
-        <div class="mb-4">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <% if @recipes.empty? %>
+        <h2>Recipes are not available</h2>
+        <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
+      <% else %>
+        <h1 class="display-4 text-center">Recipes</h1>
+        <div class="mb-4 text-center">
           <%= link_to "Add New Recipe", new_recipe_path, class: "btn btn-primary" %>
         </div>
-        <% @recipes.each do |recipe| %>
-          <div class="card mb-4">
+        <% @recipes.each_with_index do |recipe, index| %>
+          <div class="card mb-7">
             <div class="card-body">
-              <h2 class="card-title"><%= link_to recipe.name, recipe %></h2>
-              <p class="card-text"><strong>Description:</strong> <%= recipe.description %></p>
-              <p class="card-text"><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
-              <p class="card-text"><strong>Cooking Time:</strong> <%= recipe.cooking_time %> minutes</p>
-              
+              <h2 class="card-title"><%= link_to "Recipe #{index + 1}", recipe %></h2>
+              <div class="text-end">
+                <p class="card-text"><strong>Description:</strong> <%= recipe.description %></p>
+                <p class="card-text"><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
+                <p class="card-text"><strong>Cooking Time:</strong> <%= recipe.cooking_time %> minutes</p>
+              </div>
               <% if current_user == recipe.user %>
                 <%= button_to "REMOVE", recipe_path(recipe.id), method: :delete, class: "btn btn-danger btn-sm" %>
               <% end %>
@@ -23,5 +25,6 @@
           </div>
         <% end %>
       </div>
-    <%end%>
+    <% end %>
+  </div>
 </div>
