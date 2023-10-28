@@ -16,6 +16,6 @@ class ShoppingListController < ApplicationController
     @recipe_foods.each do |recipe_food|
       total_recipe_foods_price += recipe_food.food.price
     end
-    remain = total_foods_price - total_recipe_foods_price
+    total_foods_price - total_recipe_foods_price
   end
 end
