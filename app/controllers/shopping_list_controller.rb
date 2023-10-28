@@ -30,7 +30,6 @@ class ShoppingListController < ApplicationController
         missing_foods << food if recipe_food.food == food
       end
     end
-    reamining_foods = foods - missing_foods
+    foods - missing_foods
   end
-
 end
