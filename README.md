@@ -27,7 +27,7 @@
 
 # 📖 RoR Food Recipe App <a name="about-project"></a>
 
-RoR Food Recipe is a dynamic and user-friendly recipe application developed with Ruby on Rails, designed to allow users create, read, update and delete their recipes. It has features like Authentication, Authorization,  Rails dynamic Routing and testing. 
+RoR Food Recipe is a dynamic and user-friendly recipe application developed with Ruby on Rails, designed to allow users create, read, update and delete their recipes. It has features like Authentication, Authorization,  Rails dynamic Routing and testing.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -50,6 +50,7 @@ Key features of the application.
 - Forms
 - Add authorization rules
 - Add authentication
+- Use Devise gem
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -86,7 +87,7 @@ Clone this repository to your desired folder:
 ### Run Test
 To run the testing, execute the following command:
 ```
-rspec spec 
+rspec spec
 ```
 
 <!-- AUTHORS -->
