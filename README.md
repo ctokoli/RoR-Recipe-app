@@ -110,7 +110,6 @@ rspec spec
 
 Features will be added to the project.
 
-- **User Login Interface**
 - **User comments and like**
 - **Add Edit to Food**
 - **Add Edit to Recipe**
