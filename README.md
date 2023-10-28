@@ -1,4 +1,4 @@
-<h1>Blog App</h1>
+<h1>RoR Food Recipe</h1>
 
 <a name="readme-top"></a>
 
@@ -7,7 +7,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Blog App ](#-blog-app-)
+- [📖 RoR Food Recipe ](#-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -27,7 +27,7 @@
 
 # 📖 RoR Food Recipe App <a name="about-project"></a>
 
-RoR Food Recipe is a dynamic and user-friendly recipe application developed with Ruby on Rails, designed to allow users create, read, update and delete their recipes. It has features like Authentication, Authorization,  Rails dynamic Routing and testing. 
+RoR Food Recipe is a dynamic and user-friendly recipe application developed with Ruby on Rails, designed to allow users create, read, update and delete their recipes. It has features like Authentication, Authorization,  Rails dynamic Routing and testing.
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -50,6 +50,7 @@ Key features of the application.
 - Forms
 - Add authorization rules
 - Add authentication
+- Use Devise gem
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -86,14 +87,14 @@ Clone this repository to your desired folder:
 ### Run Test
 To run the testing, execute the following command:
 ```
-rspec spec 
+rspec spec
 ```
 
 <!-- AUTHORS -->
 
 ## :bust_in_silhouette: Author <a name="authors"></a>
 
- Cephas TOKOLI*
+ Cephas TOKOLI
 - GitHub: [@Ctokoli](https://github.com/ctokoli/)
 - Twitter: [@Ctokoli](https://twitter.com/ctokoli)
 - LinkedIn: [Cephas Tokoli](https://www.linkedin.com/in/ctokoli)
@@ -103,6 +104,18 @@ rspec spec
 - Twitter: [@twitterhandle](https://twitter.com/Kkmanuu1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/emmanuel-kipngeno/)
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+Features will be added to the project.
+
+- **User comments and like**
+- **Add Edit to Food**
+- **Add Edit to Recipe**
+- **Add Inventory**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
