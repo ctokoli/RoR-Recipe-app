@@ -15,7 +15,7 @@
           <div class="card mb-7">
             <div class="card-body">
              <div class="recipe"> 
-              <h2 class="card-title"><%= link_to "Recipe #{index + 1}", recipe %></h2>
+              <h2 class="card-title"><%= link_to "#{recipe.name}", recipe %></h2>
               <div class="text-end">
                 <p class="card-text"><strong>Description:</strong> <%= recipe.description %></p>
                 <p class="card-text"><strong>Preparation Time:</strong> <%= recipe.preparation_time %> minutes</p>
