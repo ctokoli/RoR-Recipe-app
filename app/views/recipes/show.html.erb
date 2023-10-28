@@ -7,11 +7,13 @@
     </div>
 
     <div class="col-md-6 text-right">
-      <%= form_with model: @recipe, url: recipe_path(@recipe.id), method: :patch, local: true do |form| %>
-        <div class="form-switch">
-          <%= form.check_box :public, class: "form-check-input", onchange: 'this.form.submit()' %>
-          <%= form.label :Public, 'public', class: "form-check-label", checked: @recipe.public %> <br />
-        </div>
+      <% if can? :update, @recipe %>
+        <%= form_with model: @recipe, url: recipe_path(@recipe.id), method: :patch, local: true do |form| %>
+          <div class="form-switch">
+            <%= form.check_box :public, class: "form-check-input", onchange: 'this.form.submit()' %>
+            <%= form.label :Public, 'public', class: "form-check-label", checked: @recipe.public %> <br />
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
@@ -20,8 +22,10 @@
   <p><strong>Description:</strong> <%= @recipe.description %></p>
 
   <div class="recipe-details-btns mt-3">
-     <%= link_to "Generate Shopping List", shopping_list_index_path(recipe_id: @recipe.id), class: 'btn btn-success' %>
-    <%= link_to "Add Ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'btn btn-primary' %>
+    <% if can? :read, @recipe %>
+      <%= link_to "Generate Shopping List", shopping_list_index_path(recipe_id: @recipe.id), class: 'btn btn-success' %>
+      <%= link_to "Add Ingredient", new_recipe_recipe_food_path(recipe_id: @recipe.id), class: 'btn btn-primary' %>
+    <% end %>
   </div>
 
   <table class="table mt-4">
@@ -39,10 +43,12 @@
           <td><%= recipe_food.food.name %></td>
           <td><%= recipe_food.quantity %></td>
           <td><%= recipe_food.food.price %></td>
+          <% if can? :read, @recipe %>
           <td class="boton">
-            <%= link_to "Edit", edit_recipe_recipe_food_path(@recipe, recipe_food), class: 'btn btn-warning' %>
-            <%= button_to "Delete", delete_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+              <%= link_to "Edit", edit_recipe_recipe_food_path(@recipe, recipe_food), class: 'btn btn-warning' %>
+              <%= button_to "Delete", delete_recipe_food_path(@recipe, recipe_food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
           </td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>
